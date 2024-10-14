@@ -1,0 +1,34 @@
+#+TITLE: TITLE OF YOUR REPORT
+#+SUBTITLE: Report Description
+#+AUTHOR: Atri Hegde
+
+#+SETUPFILE: ~/.config/doom/latex-templates/report.org
+
+#+LATEX_HEADER: \usepackage{titling}
+#+LATEX_HEADER: \renewcommand{\maketitlehooka}{\vspace{-2em}}
+#+LATEX_HEADER: \renewcommand{\maketitlehookb}{\begin{center}\large Another Subtitle{center}\vspace{-1em}}
+#+LATEX_HEADER: \renewcommand{\maketitlehookd}{\newpage}
+#+LATEX_HEADER: \AtBeginDocument{\thispagestyle{plain}}
+
+#+LATEX_HEADER: \fancyhead[C]{Web-Based Interface to make TurtleBot3 Waffles more beginner friendly - Atri Hegde}
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}
+
+#+LATEX_HEADER: \bibliographystyle{unsrt}
+#+bibliography: ref.bib
+
+#+LATEX: \newpage
+
+* Introduction
+Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
+Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
+Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
+Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
+
+#+LATEX: \newpage
+#+PRINT_BIBLIOGRAPHY:
+
+* COMMENT Local Variables
+# Local Variables:
+# eval: (add-hook 'after-save-hook (lambda () (org-latex-export-to-latex) nil t))
+# eval: (compile "latexmk -pdf -shell-escape -pvc")
+# End:
