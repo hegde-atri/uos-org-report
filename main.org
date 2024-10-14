@@ -6,7 +6,8 @@
 
 #+LATEX_HEADER: \usepackage{titling}
 #+LATEX_HEADER: \renewcommand{\maketitlehooka}{\vspace{-2em}}
-#+LATEX_HEADER: \renewcommand{\maketitlehookb}{\begin{center}\large Another Subtitle{center}\vspace{-1em}}
+#+LATEX_HEADER: \renewcommand{\maketitlehookb}{\begin{center}\includegraphics[width=0.5\textwidth]{./assets/uos_logo.png}\end{center}\vspace{1em}}
+#+LATEX_HEADER: \renewcommand{\maketitlehookc}{\begin{center}\large Another Subtitle{center}\vspace{-1em}}
 #+LATEX_HEADER: \renewcommand{\maketitlehookd}{\newpage}
 #+LATEX_HEADER: \AtBeginDocument{\thispagestyle{plain}}
 
