@@ -10,3 +10,6 @@
 /main.run.xml
 /main.toc
 /.auctex-auto/
+*.tex
+/main.lof
+/main.lot

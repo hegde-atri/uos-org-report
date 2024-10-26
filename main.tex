@@ -1,7 +1,21 @@
-% Created 2024-10-14 Mon 15:44
+% Created 2024-10-26 Sat 17:04
 % Intended LaTeX compiler: pdflatex
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
 \usepackage{minted}
+\usepackage{etoolbox}
+\makeatletter
+\makeatother
 \usepackage{lmodern}
 \renewcommand*\rmdefault{lmss}
 \usepackage{microtype}
@@ -11,6 +25,9 @@
 \usepackage{arydshln}
 \usepackage{subcaption}
 \newcommand{\point}[1]{\noindent \textbf{#1}}
+\usepackage{setspace}
+\usepackage[toc,page]{appendix}
+\usepackage[none]{hyphenat} % turn hyphenation off by default
 \definecolor{bblue}{HTML}{045ECE}
 \usepackage{hyperref}
 \hypersetup{colorlinks, linkcolor=bblue, urlcolor=bblue}
@@ -24,16 +41,8 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\usepackage{titling}
-\renewcommand{\maketitlehooka}{\vspace{-2em}}
-\renewcommand{\maketitlehookb}{\begin{center}\includegraphics[width=0.5\textwidth]{./assets/uos_logo.png}\end{center}\vspace{1em}}
-\renewcommand{\maketitlehookc}{\begin{center}\large Another Subtitle{center}\vspace{-1em}}
-\renewcommand{\maketitlehookd}{\newpage}
-\AtBeginDocument{\thispagestyle{plain}}
-\fancyhead[C]{Web-Based Interface to make TurtleBot3 Waffles more beginner friendly - Atri Hegde}
+\fancyhead[C]{Web-Based Interface to make TurtleBot3 Waffles more beginner friendly}
 \fancyfoot[C]{\thepage}
-\bibliographystyle{unsrt}
-\setcounter{secnumdepth}{2}
 \author{Atri Hegde}
 \date{\today}
 \title{TITLE OF YOUR REPORT\\\medskip
@@ -49,17 +58,66 @@
 \addbibresource{ref.bib}
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=5cm]{assets/uos_logo.png}\\[2cm]
+\linespread{1.2}\huge {\bfseries Project title}\\[2cm]
+\linespread{1}
+{\Large Your name}\\[1cm]
+{\large \emph{Supervisor:} Supervisor name}\\[1cm]
+\large \emph{A report submitted in fulfilment of the requirements}\\ \emph{for the degree of MEng Software Engineering}\\[0.3cm] \textit{in the}\\[0.3cm] School of Computer Science\\[2cm]
+\today
+\end{center}
+\end{titlepage}
+
+% -------------------------------------------------------------------
+% Declaration
+% ---------------------------------------------------------
+
+\chapter*{\Large Declaration}
+
+All sentences or passages quoted in this report from other people's work have been specifically acknowledged by clear cross-referencing to author, work and page(s). Any illustrations that are not the work of the author of this report have been used with the explicit permission of the originator and are specifically acknowledged. I understand that failure to do this amounts to plagiarism and will be considered grounds for failure in this project and the degree examination as a whole.
+
+
+
+\noindent Name: John Smith \\[1mm]
+\rule[1em]{25em}{0.5pt}
+
+\noindent Date: \today \\[1mm]
+\rule[1em]{25em}{0.5pt}
+
+% -------------------------------------------------------------------
+% Abstract
+% ---------------------------------------------------------
+
+\chapter*{\Large \center Abstract}
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+
+
+% -------------------------------------------------------------------
+% TOC etc
+% -------------------------------------------------------------------
+
 \tableofcontents
-
-\newpage
-\section{Introduction}
-\label{sec:org1a36e1d}
-Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
-Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
-Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
-Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
-
-\newpage
-\printbibliography
+\listoffigures
+\listoftables
+\chapter{Introduction}
+\label{sec:org5128d0a}
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
+This is the introduction.
 \end{document}

@@ -1,32 +1,60 @@
 #+TITLE: TITLE OF YOUR REPORT
 #+SUBTITLE: Report Description
 #+AUTHOR: Atri Hegde
+#+OPTIONS: title:nil toc:nil H:3
+#+SETUPFILE: ~/.config/doom/latex-templates/uos-report.org
 
-#+SETUPFILE: ~/.config/doom/latex-templates/report.org
+#+LATEX: \begin{titlepage}
+#+LATEX: \begin{center}
+#+LATEX: \includegraphics[width=5cm]{assets/uos_logo.png}\\[2cm]
+#+LATEX: \linespread{1.2}\huge {\bfseries Project title}\\[2cm]
+#+LATEX: \linespread{1}
+#+LATEX: {\Large Your name}\\[1cm]
+#+LATEX: {\large \emph{Supervisor:} Supervisor name}\\[1cm]
+#+LATEX: \large \emph{A report submitted in fulfilment of the requirements}\\ \emph{for the degree of MEng Software Engineering}\\[0.3cm] \textit{in the}\\[0.3cm] School of Computer Science\\[2cm]
+#+LATEX: \today
+#+LATEX: \end{center}
+#+LATEX: \end{titlepage}
 
-#+LATEX_HEADER: \usepackage{titling}
-#+LATEX_HEADER: \renewcommand{\maketitlehooka}{\vspace{-2em}}
-#+LATEX_HEADER: \renewcommand{\maketitlehookb}{\begin{center}\includegraphics[width=0.5\textwidth]{./assets/uos_logo.png}\end{center}\vspace{1em}}
-#+LATEX_HEADER: \renewcommand{\maketitlehookc}{\begin{center}\large Another Subtitle{center}\vspace{-1em}}
-#+LATEX_HEADER: \renewcommand{\maketitlehookd}{\newpage}
-#+LATEX_HEADER: \AtBeginDocument{\thispagestyle{plain}}
-
-#+LATEX_HEADER: \fancyhead[C]{Web-Based Interface to make TurtleBot3 Waffles more beginner friendly - Atri Hegde}
+#+LATEX_HEADER: \fancyhead[C]{Web-Based Interface to make TurtleBot3 Waffles more beginner friendly}
 #+LATEX_HEADER: \fancyfoot[C]{\thepage}
+#+BIBLIOGRAPHY: ref.bib
 
-#+LATEX_HEADER: \bibliographystyle{unsrt}
-#+bibliography: ref.bib
 
-#+LATEX: \newpage
+#+LATEX: % -------------------------------------------------------------------
+#+LATEX: % Declaration
+#+LATEX: % ---------------------------------------------------------
+
+#+LATEX: \chapter*{\Large Declaration}
+
+All sentences or passages quoted in this report from other people's work have been specifically acknowledged by clear cross-referencing to author, work and page(s). Any illustrations that are not the work of the author of this report have been used with the explicit permission of the originator and are specifically acknowledged. I understand that failure to do this amounts to plagiarism and will be considered grounds for failure in this project and the degree examination as a whole.
+
+
+
+#+LATEX: \noindent Name: John Smith \\[1mm]
+#+LATEX: \rule[1em]{25em}{0.5pt}
+
+#+LATEX: \noindent Date: \today \\[1mm]
+#+LATEX: \rule[1em]{25em}{0.5pt}
+
+#+LATEX: % -------------------------------------------------------------------
+#+LATEX: % Abstract
+#+LATEX: % ---------------------------------------------------------
+
+#+LATEX: \chapter*{\Large \center Abstract}
+#+INCLUDE: "./chapters/introduction.org"
+
+
+#+LATEX: % -------------------------------------------------------------------
+#+LATEX: % TOC etc
+#+LATEX: % -------------------------------------------------------------------
+
+#+LATEX: \tableofcontents
+#+LATEX: \listoffigures
+#+LATEX: \listoftables
 
 * Introduction
-Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
-Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
-Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
-Hello, this is the beginning of a random sentence. Yes, lets goo. Why?
-
-#+LATEX: \newpage
-#+PRINT_BIBLIOGRAPHY:
+#+INCLUDE: "./chapters/introduction.org"
 
 * COMMENT Local Variables
 # Local Variables:
