@@ -1,4 +1,4 @@
-% Created 2024-10-26 Sat 17:04
+% Created 2024-11-21 Thu 21:58
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{report}
 \usepackage[utf8]{inputenc}
@@ -45,23 +45,24 @@
 \fancyfoot[C]{\thepage}
 \author{Atri Hegde}
 \date{\today}
-\title{TITLE OF YOUR REPORT\\\medskip
+\title{TITLE OF YOUR REPORT Introduction\\\medskip
 \large Report Description}
 \hypersetup{
  pdfauthor={Atri Hegde},
- pdftitle={TITLE OF YOUR REPORT},
+ pdftitle={TITLE OF YOUR REPORT Introduction},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.8)}, 
  pdflang={English}}
 \usepackage{biblatex}
 \addbibresource{ref.bib}
+\addbibresource{../ref.bib}
 \begin{document}
 
 \begin{titlepage}
 \begin{center}
 \includegraphics[width=5cm]{assets/uos_logo.png}\\[2cm]
-\linespread{1.2}\huge {\bfseries Project title}\\[2cm]
+\linespread{1.2}\huge {\bfseries Project Title}\\[2cm]
 \linespread{1}
 {\Large Your name}\\[1cm]
 {\large \emph{Supervisor:} Supervisor name}\\[1cm]
@@ -78,28 +79,24 @@
 
 All sentences or passages quoted in this report from other people's work have been specifically acknowledged by clear cross-referencing to author, work and page(s). Any illustrations that are not the work of the author of this report have been used with the explicit permission of the originator and are specifically acknowledged. I understand that failure to do this amounts to plagiarism and will be considered grounds for failure in this project and the degree examination as a whole.
 
-
-
 \noindent Name: John Smith \\[1mm]
+\rule[1em]{25em}{0.5pt}
+
+\noindent Signature:\\[1mm]
 \rule[1em]{25em}{0.5pt}
 
 \noindent Date: \today \\[1mm]
 \rule[1em]{25em}{0.5pt}
 
 % -------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------
 % Abstract
 % ---------------------------------------------------------
-
 \chapter*{\Large \center Abstract}
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
-This is the introduction.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+% -------------------------------------------------------------------
 
 
 % -------------------------------------------------------------------
@@ -110,7 +107,8 @@ This is the introduction.
 \listoffigures
 \listoftables
 \chapter{Introduction}
-\label{sec:org5128d0a}
+\label{sec:orge5140e5}
+This is the introduction.\autocite{example_citation}
 This is the introduction.
 This is the introduction.
 This is the introduction.
@@ -119,5 +117,10 @@ This is the introduction.
 This is the introduction.
 This is the introduction.
 This is the introduction.
-This is the introduction.
+\chapter{Example Heading}
+\label{sec:orgb0b360f}
+Testing \autocite{example_citation}
+
+
+\printbibliography
 \end{document}

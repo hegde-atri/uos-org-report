@@ -1,4 +1,7 @@
-This is the introduction.
+#+TITLE: Introduction
+#+BIBLIOGRAPHY: ../ref.bib
+
+This is the introduction.[cite:@example_citation]
 This is the introduction.
 This is the introduction.
 This is the introduction.

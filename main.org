@@ -7,7 +7,7 @@
 #+LATEX: \begin{titlepage}
 #+LATEX: \begin{center}
 #+LATEX: \includegraphics[width=5cm]{assets/uos_logo.png}\\[2cm]
-#+LATEX: \linespread{1.2}\huge {\bfseries Project title}\\[2cm]
+#+LATEX: \linespread{1.2}\huge {\bfseries Project Title}\\[2cm]
 #+LATEX: \linespread{1}
 #+LATEX: {\Large Your name}\\[1cm]
 #+LATEX: {\large \emph{Supervisor:} Supervisor name}\\[1cm]
@@ -29,20 +29,24 @@
 
 All sentences or passages quoted in this report from other people's work have been specifically acknowledged by clear cross-referencing to author, work and page(s). Any illustrations that are not the work of the author of this report have been used with the explicit permission of the originator and are specifically acknowledged. I understand that failure to do this amounts to plagiarism and will be considered grounds for failure in this project and the degree examination as a whole.
 
-
-
 #+LATEX: \noindent Name: John Smith \\[1mm]
+#+LATEX: \rule[1em]{25em}{0.5pt}
+
+#+LATEX: \noindent Signature:\\[1mm]
 #+LATEX: \rule[1em]{25em}{0.5pt}
 
 #+LATEX: \noindent Date: \today \\[1mm]
 #+LATEX: \rule[1em]{25em}{0.5pt}
 
 #+LATEX: % -------------------------------------------------------------------
+
+
+#+LATEX: % -------------------------------------------------------------------
 #+LATEX: % Abstract
 #+LATEX: % ---------------------------------------------------------
-
 #+LATEX: \chapter*{\Large \center Abstract}
-#+INCLUDE: "./chapters/introduction.org"
+#+INCLUDE: "./chapters/abstract.org"
+#+LATEX: % -------------------------------------------------------------------
 
 
 #+LATEX: % -------------------------------------------------------------------
@@ -55,6 +59,12 @@ All sentences or passages quoted in this report from other people's work have be
 
 * Introduction
 #+INCLUDE: "./chapters/introduction.org"
+
+* Example Heading
+Testing [cite:@example_citation]
+
+
+#+PRINT_BIBLIOGRAPHY:
 
 * COMMENT Local Variables
 # Local Variables:
