@@ -64,7 +64,19 @@ All sentences or passages quoted in this report from other people's work have be
 Testing [cite:@example_citation]
 
 
+#+LATEX: % -------------------------------------------------------------------
+#+LATEX: % BIBLIOGRAPHY
+#+LATEX: % -------------------------------------------------------------------
 #+PRINT_BIBLIOGRAPHY:
+
+
+#+LATEX: % -------------------------------------------------------------------
+#+LATEX: % Appendices
+#+LATEX: % -------------------------------------------------------------------
+#+LATEX: \begin{appendices}
+* Appendix Name
+#+INCLUDE: "./appendices/appendixA.org"
+#+LATEX: \end{appendices}
 
 * COMMENT Local Variables
 # Local Variables:
