@@ -16,10 +16,11 @@
 #+LATEX: \end{center}
 #+LATEX: \end{titlepage}
 
-#+LATEX_HEADER: \fancyhead[C]{Web-Based Interface to make TurtleBot3 Waffles more beginner friendly}
-#+LATEX_HEADER: \fancyfoot[C]{\thepage}
-#+BIBLIOGRAPHY: ref.bib
+#+LATEX_HEADER: \fancyhead[C]{\textit{\leftmark}} % chapter name centred in header
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt} % line under the header
+#+LATEX_HEADER: \fancyfoot[C]{\thepage} % page number at bottom
 
+#+BIBLIOGRAPHY: ref.bib
 
 #+LATEX: % -------------------------------------------------------------------
 #+LATEX: % Declaration

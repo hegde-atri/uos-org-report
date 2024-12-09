@@ -1,4 +1,4 @@
-% Created 2024-11-21 Thu 22:12
+% Created 2024-12-09 Mon 13:28
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{report}
 \usepackage[utf8]{inputenc}
@@ -16,6 +16,9 @@
 \usepackage{etoolbox}
 \makeatletter
 \makeatother
+\fancyhead[C]{\textit{\leftmark}} % chapter name on the left
+\renewcommand{\headrulewidth}{0.4pt} % line under the header
+\fancyfoot[C]{\thepage} % page number at bottom
 \usepackage{lmodern}
 \renewcommand*\rmdefault{lmss}
 \usepackage{microtype}
@@ -25,6 +28,7 @@
 \usepackage{arydshln}
 \usepackage{subcaption}
 \newcommand{\point}[1]{\noindent \textbf{#1}}
+\usepackage{float}
 \usepackage{setspace}
 \usepackage[toc,page]{appendix}
 \usepackage[none]{hyphenat} % turn hyphenation off by default
@@ -41,8 +45,9 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{Web-Based Interface to make TurtleBot3 Waffles more beginner friendly}
-\fancyfoot[C]{\thepage}
+\fancyhead[C]{\textit{\leftmark}} % chapter name centred in header
+\renewcommand{\headrulewidth}{0.4pt} % line under the header
+\fancyfoot[C]{\thepage} % page number at bottom
 \author{Atri Hegde}
 \date{\today}
 \title{TITLE OF YOUR REPORT Introduction\\\medskip
@@ -52,7 +57,7 @@
  pdftitle={TITLE OF YOUR REPORT Introduction},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 29.4 (Org mode 9.8)}, 
+ pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
  pdflang={English}}
 \usepackage{biblatex}
 \addbibresource{ref.bib}
@@ -107,7 +112,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \listoffigures
 \listoftables
 \chapter{Introduction}
-\label{sec:org7790bb2}
+\label{sec:org00f6cb2}
 This is the introduction.\autocite{example_citation}
 This is the introduction.
 This is the introduction.
@@ -118,7 +123,7 @@ This is the introduction.
 This is the introduction.
 This is the introduction.
 \chapter{Example Heading}
-\label{sec:orgbd38bef}
+\label{sec:org17614f7}
 Testing \autocite{example_citation}
 
 
@@ -133,7 +138,7 @@ Testing \autocite{example_citation}
 % -------------------------------------------------------------------
 \begin{appendices}
 \chapter{Appendix Name}
-\label{sec:org0dc185f}
+\label{sec:orge74bbe2}
 This is appendix A.
 This is appendix A.
 This is appendix A.
