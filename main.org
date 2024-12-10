@@ -16,10 +16,11 @@
 #+LATEX: \end{center}
 #+LATEX: \end{titlepage}
 
-#+LATEX_HEADER: \fancyhead[C]{\textit{\leftmark}} % chapter name centred in header
-#+LATEX_HEADER: \renewcommand{\headrulewidth}{0.4pt} % line under the header
-#+LATEX_HEADER: \fancyfoot[C]{\thepage} % page number at bottom
+#+LATEX_HEADER: \fancyhead[C]{\textit{\leftmark}}
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}
 
+#+LATEX_HEADER: \usepackage[backend=biber,style=ieee,sorting=none,defernumbers=false]{biblatex}
+#+LATEX_HEADER: \addbibresource{ref.bib}
 #+BIBLIOGRAPHY: ref.bib
 
 #+LATEX: % -------------------------------------------------------------------
@@ -64,11 +65,12 @@ All sentences or passages quoted in this report from other people's work have be
 * Example Heading
 Testing [cite:@example_citation]
 
-
 #+LATEX: % -------------------------------------------------------------------
 #+LATEX: % BIBLIOGRAPHY
 #+LATEX: % -------------------------------------------------------------------
-#+PRINT_BIBLIOGRAPHY:
+#+LATEX: \newpage
+#+LATEX: \printbibliography[heading=bibintoc]
+#+CITE_EXPORT: biblatex numeric
 
 
 #+LATEX: % -------------------------------------------------------------------
@@ -76,5 +78,8 @@ Testing [cite:@example_citation]
 #+LATEX: % -------------------------------------------------------------------
 #+LATEX: \begin{appendices}
 * Appendix Name
+:PROPERTIES:
+:CUSTOM_ID: appendix:appendix-name
+:END:
 #+INCLUDE: "./appendices/appendixA.org"
 #+LATEX: \end{appendices}

@@ -1,4 +1,4 @@
-% Created 2024-12-09 Mon 13:28
+% Created 2024-12-10 Tue 10:23
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{report}
 \usepackage[utf8]{inputenc}
@@ -12,13 +12,9 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage{minted}
 \usepackage{etoolbox}
 \makeatletter
 \makeatother
-\fancyhead[C]{\textit{\leftmark}} % chapter name on the left
-\renewcommand{\headrulewidth}{0.4pt} % line under the header
-\fancyfoot[C]{\thepage} % page number at bottom
 \usepackage{lmodern}
 \renewcommand*\rmdefault{lmss}
 \usepackage{microtype}
@@ -45,9 +41,12 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\textit{\leftmark}} % chapter name centred in header
-\renewcommand{\headrulewidth}{0.4pt} % line under the header
-\fancyfoot[C]{\thepage} % page number at bottom
+\fancyhead[C]{\textit{\leftmark}}
+\fancyfoot[C]{\thepage}
+\usepackage[backend=biber,sorting=none,defernumbers=false,style=numeric]{biblatex}
+\addbibresource{/home/mizuuu/repos/uni/org-report/ref.bib}
+\addbibresource{/home/mizuuu/repos/uni/ref.bib}
+\addbibresource{ref.bib}
 \author{Atri Hegde}
 \date{\today}
 \title{TITLE OF YOUR REPORT Introduction\\\medskip
@@ -57,11 +56,8 @@
  pdftitle={TITLE OF YOUR REPORT Introduction},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
+ pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
  pdflang={English}}
-\usepackage{biblatex}
-\addbibresource{ref.bib}
-\addbibresource{../ref.bib}
 \begin{document}
 
 \begin{titlepage}
@@ -111,8 +107,9 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \tableofcontents
 \listoffigures
 \listoftables
+
 \chapter{Introduction}
-\label{sec:org00f6cb2}
+\label{sec:org569f9b4}
 This is the introduction.\autocite{example_citation}
 This is the introduction.
 This is the introduction.
@@ -122,23 +119,22 @@ This is the introduction.
 This is the introduction.
 This is the introduction.
 This is the introduction.
-\chapter{Example Heading}
-\label{sec:org17614f7}
-Testing \autocite{example_citation}
 
+\chapter{Example Heading}
+\label{sec:orgf145b5e}
+Testing \autocite{example_citation}
 
 % -------------------------------------------------------------------
 % BIBLIOGRAPHY
 % -------------------------------------------------------------------
-\printbibliography
-
-
+\newpage
+\printbibliography[heading=bibintoc]
 % -------------------------------------------------------------------
 % Appendices
 % -------------------------------------------------------------------
 \begin{appendices}
 \chapter{Appendix Name}
-\label{sec:orge74bbe2}
+\label{sec:org1d1c02d}
 This is appendix A.
 This is appendix A.
 This is appendix A.
