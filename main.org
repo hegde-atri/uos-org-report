@@ -78,9 +78,3 @@ Testing [cite:@example_citation]
 * Appendix Name
 #+INCLUDE: "./appendices/appendixA.org"
 #+LATEX: \end{appendices}
-
-* COMMENT Local Variables
-# Local Variables:
-# eval: (add-hook 'after-save-hook (lambda () (org-latex-export-to-latex) nil t))
-# eval: (compile "latexmk -pdf -shell-escape -pvc")
-# End:

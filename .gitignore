@@ -12,3 +12,4 @@
 *.tex
 /main.lof
 /main.lot
+/.direnv/
