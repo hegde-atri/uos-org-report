@@ -4,6 +4,14 @@
 #+OPTIONS: title:nil toc:nil H:3
 #+SETUPFILE: ~/.config/doom/latex-templates/uos-report.org
 
+#+LATEX_HEADER: \fancyhead[C]{\textit{\leftmark}}
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}
+
+#+LATEX_HEADER: \usepackage[backend=biber,style=ieee,sorting=none,defernumbers=false]{biblatex}
+#+LATEX_HEADER: \addbibresource{ref.bib}
+#+BIBLIOGRAPHY: ref.bib
+
+#+LATEX: \pagenumbering{roman}
 #+LATEX: \begin{titlepage}
 #+LATEX: \begin{center}
 #+LATEX: \includegraphics[width=5cm]{assets/uos_logo.png}\\[2cm]
@@ -16,16 +24,10 @@
 #+LATEX: \end{center}
 #+LATEX: \end{titlepage}
 
-#+LATEX_HEADER: \fancyhead[C]{\textit{\leftmark}}
-#+LATEX_HEADER: \fancyfoot[C]{\thepage}
-
-#+LATEX_HEADER: \usepackage[backend=biber,style=ieee,sorting=none,defernumbers=false]{biblatex}
-#+LATEX_HEADER: \addbibresource{ref.bib}
-#+BIBLIOGRAPHY: ref.bib
-
 #+LATEX: % -------------------------------------------------------------------
 #+LATEX: % Declaration
 #+LATEX: % ---------------------------------------------------------
+
 
 #+LATEX: \chapter*{\Large Declaration}
 
@@ -58,6 +60,8 @@ All sentences or passages quoted in this report from other people's work have be
 #+LATEX: \tableofcontents
 #+LATEX: \listoffigures
 #+LATEX: \listoftables
+
+#+LATEX: \pagenumbering{arabic}
 
 * Introduction
 #+INCLUDE: "./chapters/introduction.org"

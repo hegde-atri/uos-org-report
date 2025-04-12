@@ -7,6 +7,12 @@ watch:
 		make pdf; \
 	done
 
+.PHONEY: watch-mac
+watch-mac:
+	while true; do \
+		fswatch -1 ./chapters/*.org ./appendices/*.org *.org; \
+		make pdf; \
+	done
 .PHONY: pdf
 pdf:
 	emacs --batch main.org -l org \
