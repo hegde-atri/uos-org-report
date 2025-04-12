@@ -2,16 +2,58 @@
 #+SUBTITLE: Report Description
 #+AUTHOR: Atri Hegde
 #+OPTIONS: title:nil toc:nil H:3
-#+SETUPFILE: ~/.config/doom/latex-templates/uos-report.org
 
+#+LATEX_CLASS: report
+#+LATEX_CLASS_OPTIONS: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage{etoolbox}
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \makeatother
+
+# % Font
+#+LATEX_HEADER: \usepackage{lmodern}
+#+LATEX_HEADER: \renewcommand*\rmdefault{lmss}
+#+LATEX_HEADER: \usepackage{microtype}
+
+#+LATEX_HEADER: \usepackage[table]{xcolor}
+#+LATEX_HEADER: \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{arydshln}
+#+LATEX_HEADER: \usepackage{subcaption}
+#+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
+#+LATEX_HEADER: \usepackage{float}
+
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \usepackage[toc,page]{appendix}
+#+LATEX_HEADER: \usepackage[none]{hyphenat} % turn hyphenation off by default
+
+# % Hyperlinks
+#+LATEX_HEADER: \definecolor{bblue}{HTML}{045ECE}
+#+LaTeX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks, linkcolor=bblue, urlcolor=bblue}
+
+#+LaTeX_HEADER: \usepackage{csquotes}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{bm}
+#+LaTeX_HEADER: \usepackage[mla]{ellipsis}
+#+LaTeX_HEADER: \parindent = 0em
+#+LaTeX_HEADER: \setlength\parskip{.5\baselineskip}
+#+LATEX_HEADER: \usepackage{adjustbox}
+
+# % Header/Footer
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhf{}
 #+LATEX_HEADER: \fancyhead[C]{\textit{\leftmark}}
 #+LATEX_HEADER: \fancyfoot[C]{\thepage}
 
+# % Bibliography
 #+LATEX_HEADER: \usepackage[backend=biber,style=ieee,sorting=none,defernumbers=false]{biblatex}
 #+LATEX_HEADER: \addbibresource{ref.bib}
 #+BIBLIOGRAPHY: ref.bib
 
 #+LATEX: \pagenumbering{roman}
+
+# % Title page
 #+LATEX: \begin{titlepage}
 #+LATEX: \begin{center}
 #+LATEX: \includegraphics[width=5cm]{assets/uos_logo.png}\\[2cm]
@@ -24,9 +66,9 @@
 #+LATEX: \end{center}
 #+LATEX: \end{titlepage}
 
-#+LATEX: % -------------------------------------------------------------------
-#+LATEX: % Declaration
-#+LATEX: % ---------------------------------------------------------
+# % ---------------------------------------------------------
+# % Declaration
+# % ---------------------------------------------------------
 
 
 #+LATEX: \chapter*{\Large Declaration}
@@ -42,44 +84,44 @@ All sentences or passages quoted in this report from other people's work have be
 #+LATEX: \noindent Date: \today \\[1mm]
 #+LATEX: \rule[1em]{25em}{0.5pt}
 
-#+LATEX: % -------------------------------------------------------------------
+# % -------------------------------------------------------------------
 
 
-#+LATEX: % -------------------------------------------------------------------
-#+LATEX: % Abstract
-#+LATEX: % ---------------------------------------------------------
+# % -------------------------------------------------------------------
+# % Abstract
+# % -------------------------------------------------------------------
 #+LATEX: \chapter*{\Large \center Abstract}
 #+INCLUDE: "./chapters/abstract.org"
-#+LATEX: % -------------------------------------------------------------------
+# % -------------------------------------------------------------------
 
 
-#+LATEX: % -------------------------------------------------------------------
-#+LATEX: % TOC etc
-#+LATEX: % -------------------------------------------------------------------
+# % -------------------------------------------------------------------
+# % TOC etc
+# % -------------------------------------------------------------------
 
 #+LATEX: \tableofcontents
 #+LATEX: \listoffigures
 #+LATEX: \listoftables
 
-#+LATEX: \pagenumbering{arabic}
 
 * Introduction
+#+LATEX: \pagenumbering{arabic}
 #+INCLUDE: "./chapters/introduction.org"
 
 * Example Heading
 Testing [cite:@example_citation]
 
-#+LATEX: % -------------------------------------------------------------------
-#+LATEX: % BIBLIOGRAPHY
-#+LATEX: % -------------------------------------------------------------------
+# % -------------------------------------------------------------------
+# % BIBLIOGRAPHY
+# % -------------------------------------------------------------------
 #+LATEX: \newpage
 #+LATEX: \printbibliography[heading=bibintoc]
 #+CITE_EXPORT: biblatex numeric
 
 
-#+LATEX: % -------------------------------------------------------------------
-#+LATEX: % Appendices
-#+LATEX: % -------------------------------------------------------------------
+# % -------------------------------------------------------------------
+# % Appendices
+# % -------------------------------------------------------------------
 #+LATEX: \begin{appendices}
 * Appendix Name
 :PROPERTIES:
